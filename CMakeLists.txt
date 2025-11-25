@@ -9,4 +9,4 @@ list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/Modules")
 include(Eigen3)
 
 set(EXAMPLE_DIR "src/examples")
-add_executable(${PROJECT_NAME} ${EXAMPLE_DIR}/4/1.cpp)
+add_executable(${PROJECT_NAME} ${EXAMPLE_DIR}/2/6.cpp)

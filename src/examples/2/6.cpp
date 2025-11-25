@@ -21,7 +21,7 @@ int main() {
     cout << "Dot: \n" << v.dot(w) << endl;
     double dp = v.adjoint() * w;
     double dp_t = v.transpose() * w;
-    cout << "dp: " << dp << ", dp_t" << dp_t << endl;
+    cout << "dp: " << dp << ", dp_t: " << dp_t << endl;
 
     // 设三维向量 a=(ax​,ay​,az​)（列向量形式为
     // ​ax​ay​az​​

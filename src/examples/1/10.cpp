@@ -12,11 +12,16 @@
 
 int main() {
     Eigen::MatrixXd m(2, 2);
+    m << 1, 5, 3, 9;
     std::cout << "seze: " << m.size() << ", rows: " << m.rows() << ", cols: " << m.cols() << std::endl;
 
     Eigen::MatrixXd n(3, 3);
+    n << 1, 2, 3,
+            4, 5, 6,
+                7, 8, 9;
     m = n;
     std::cout << "seze: " << m.size() << ", rows: " << m.rows() << ", cols: " << m.cols() << std::endl;
-
+    std::cout << m.size() << std::endl;
+    std::cout << m << std::endl;
     return 0;
 }
