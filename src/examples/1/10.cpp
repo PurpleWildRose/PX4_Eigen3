@@ -19,9 +19,13 @@ int main() {
     n << 1, 2, 3,
             4, 5, 6,
                 7, 8, 9;
-    m = n;
-    std::cout << "seze: " << m.size() << ", rows: " << m.rows() << ", cols: " << m.cols() << std::endl;
-    std::cout << m.size() << std::endl;
-    std::cout << m << std::endl;
+    // m = n;
+    n = m;
+    std::cout << "seze: " << n.size() << ", rows: " << n.rows() << ", cols: " << n.cols() << std::endl;
+    std::cout << n.size() << std::endl;
+    std::cout << n << std::endl;
+    // std::cout << "seze: " << m.size() << ", rows: " << m.rows() << ", cols: " << m.cols() << std::endl;
+    // std::cout << m.size() << std::endl;
+    // std::cout << m << std::endl;
     return 0;
 }
