@@ -15,7 +15,7 @@ add_definitions(-DEIGEN_DISABLE_UNALIGNED_ARRAY_ASSERT)
 
 
 set(EXAMPLE_DIR "src/examples")
-add_executable(${PROJECT_NAME} ${EXAMPLE_DIR}/4/4.cpp)
+add_executable(${PROJECT_NAME} ${EXAMPLE_DIR}/7/1.cpp)
 # 针对 GCC 编译器，抑制 -Wignored-attributes 警告
-target_compile_options(${PROJECT_NAME} PRIVATE -Wno-ignored-attributes)
+target_compile_options(${PROJECT_NAME} PRIVATE -Wno-ignored-attributes -Wno-deprecated-declarations)
 
