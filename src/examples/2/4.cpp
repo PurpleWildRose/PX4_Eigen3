@@ -1,10 +1,10 @@
 /**
  * Eigen提供矩阵/向量算术运算，可以通过重载常见的 C++ 算术运算符（例如 +、-、*）或特殊方法（例如dot()、cross()等）来实现。对于Matrix类（矩阵和向量），
  * 运算符仅重载以支持线性代数运算。例如，matrix1 * matrix2表示矩阵乘积，而vector + scalar不允许使用其他运算符。
- * 
+ *
  * - 稠密矩阵和数组操作
- *      - 矩阵和向量运算 
- * 
+ *      - 矩阵和向量运算
+ *
  * @param 转置（Transposition）与共轭（Conjugation）
  * transpose aT, conjugate a¯, and adjoint (i.e., conjugate transpose) a∗  分别通过成员函数transpose()、conjugate()和adjoint()获得。
  */
@@ -33,11 +33,12 @@ int main() {
     // catch(const std::exception& e){
     //     std::cout << "Error way: \n" << std::endl;
     // }
-        
+
     // 这就是所谓的别名问题。在“调试模式”（即断言未被禁用时），这类常见陷阱会被自动检测到。
     // 对于原地转置，例如在 中a = a.transpose()，只需使用transposeInPlace()函数即可：
     a.transposeInPlace();
     std::cout << "Inplace: \n" << a << std::endl;
+    // 对于复矩阵，还有adjiontInPlace()
 
     // 仅支持方阵（如 3×3 矩阵）或动态尺寸矩阵（MatrixXd/VectorXd，编译时维度未固定）；
     // 固定尺寸的非方阵（如 Vector3d 是 Matrix<double, 3, 1>，固定 3 行 1 列）无法通过 transposeInPlace() 原地转置（维度无法从 3×1 改为 1×3）

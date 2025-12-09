@@ -1,9 +1,9 @@
 /**
  * 讨论几种高级矩阵初始化方法，并详细介绍了之前介绍过的逗号初始化方法。此外，还解释了如何获取特殊矩阵，例如单位矩阵和零矩阵。
- * 
+ *
  * - 稠密矩阵和数组操作
- *      - 高级初始化 
- * 
+ *      - 高级初始化
+ *
  * @param 特殊矩阵和数组
  * Matrix和Array类都有静态方法，例如` Zero()`，可用于将所有系数初始化为零。该方法有三种变体。第一种变体不接受任何参数，只能用于固定大小的对象。
  * 如果要将动态大小的对象初始化为零，则需要指定其大小。
@@ -63,6 +63,7 @@ int main() {
     mat2.bottomRightCorner(size / 2, size / 2).setZero();
     cout << "mat2: " << endl << mat2 << endl;
 
+    // 使用近似逗号初始化
     MatrixXd mat3(size, size);
     mat3 << MatrixXd::Zero(size / 2, size / 2), MatrixXd::Identity(size / 2, size / 2),
                 MatrixXd::Identity(size / 2, size / 2), MatrixXd::Zero(size / 2, size / 2);

@@ -1,11 +1,12 @@
 /**
  * 在Eigen中，所有矩阵和向量都是Matrix模板类的对象。向量只是矩阵的一种特殊情况，它只有 1 行或 1 列。
- * 
+ *
  * - 稠密矩阵和数组操作
  *      - 矩阵类
- * 
+ *
  * @param 调整大小
  * 可以使用`rows()`、`cols()`和`size()`方法获取矩阵的当前大小。这些方法分别返回行数、列数和系数个数。动态矩阵的大小调整可以通过`resize()`方法完成。
+ *      · resize仅限动态矩阵
  */
 #include <Eigen/Dense>
 #include <iostream>
@@ -17,7 +18,7 @@ int main() {
         4, 5, 6,
         7, 8, 9,
         10, 11, 12;
-    
+
     std::cout << "rows: " << m.rows() << std::endl;
     std::cout << "cols: " << m.cols() << std::endl;
     std::cout << "size: " << m.size() << std::endl;

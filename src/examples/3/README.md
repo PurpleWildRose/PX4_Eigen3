@@ -11,4 +11,4 @@
     abs() / min() / sqrt()
 6.cpp
     数组表达式和矩阵表达式之间的转换
-    .array() / .matrix()
+    .array() / .matrix() / matrix的系数乘积: cwiseProduct
