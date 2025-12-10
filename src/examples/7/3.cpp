@@ -18,6 +18,9 @@ int main() {
     Eigen::Matrix2d mat;
     mat << 1, 2, 3, -4;
 
-
+    // 这些运算符通常与 数组 提供的逐系数比较和相等运算符结合使用
+    cout << "(mat > 0).all() = " << (mat.array() > 0).all() << endl;
+    cout << "(mat < 0).any() = " << (mat.array() < 0).any() << endl;
+    cout << "(mat > 1).count() = " << (mat.array() > 1).count() << endl;
     return 0;
 }
