@@ -15,6 +15,13 @@
 using namespace std;
 int main() {
     // reshape() 是 “视图重塑”（不改变内存、不拷贝数据），resize() 是 “容器扩容 / 缩容”（改变内存、可能拷贝 / 初始化数据）
+    // 更通用的重塑变换通过 ` reshaped(nrows,ncols) 函数实现。
+    // 以下示例展示了如何将一个 4x4 矩阵重塑为一个 2x8 矩阵：
+
+    // reshaped是3.4版本有的，目前版本为3.2
+    Eigen::Matrix2f m = Eigen::Matrix2f::Random();
+    cout << "原矩阵: \n" << m << endl;
+    cout << "reshaped矩阵: \n" << m.reshaped() << endl;
 
     return 0;
 }
